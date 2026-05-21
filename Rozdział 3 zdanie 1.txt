@@ -1,0 +1,52 @@
+Rozdział 3 zdanie 1
+
+JSX Expression to możliwość pisania kodu w języku JavaScript wewnątrz JSX. Kiedy piszmy wewnątrz {} w JSX możemy wpisywać język JavaScript.
+Można umieszczać w klamrach:
+1.String
+2.Number
+3.Wyrażenie arytmetyczne
+4.Wywołanie funkcji
+NIE można umieszczać w klamrach:
+1.Pętla for
+2.Deklaracja zmiennej const let var
+
+Zadanie 2
+
+import { useState } from 'react'
+import '../App.css'
+
+function Zadanie() {
+  const userName = 'Jan Kowalski'; 
+
+const userAge = 28; 
+const profile = { city: 'Kraków' }; 
+const greeting = 'Witaj';
+
+  
+
+return(
+<>
+    
+    <div class="profile"> 
+
+ <h1>{greeting}</h1> 
+
+ <p>Imię: {userName}, wiek: {userAge}</p> 
+
+ <p>Miasto: {profile.city}</p> 
+
+ <span>Godzina: {new Date().getHours()}:{new Date().getMinutes()}</span> 
+
+ </div> 
+</>
+)
+
+
+}
+
+export default Zadanie
+
+
+Błędy pojawiały się w deklaracji zmiennej w {} co jest jasno zabronione oraz w wywoływaniu miasta gdyż aby zrobić to poprawnie musimy użyć {profile.city}
+
+
